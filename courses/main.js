@@ -80,8 +80,8 @@ const _apiKey = 'apikey=d4eecb0c66dedbfae4eab45d312fc1df'; // смысл тот 
 
 let nuMber = 4.6;
 
-console.log(-4/0); - Infinity(+-)
-console.log('string'*9); - NaN(Not and Number)
+console.log(-4/0);//- Infinity(+-)
+console.log('string'*9); //- NaN(Not and Number)
 
 const persone = "Alex";
 
@@ -110,12 +110,13 @@ console.log(arr[1]);
 // 0: plum.png - поэтому массивы частный случай объекта
 
 
+
 //Разница между Массивами и Объектами 
 
 const aRr = ['a', 'b', 'c']; //массив - перечень информации по порядку, порядок имеет роль
 const arrObj = {
-    0: a,
-    1: b,
+    a: a,
+    '1': b,
     2: c
 }
 
