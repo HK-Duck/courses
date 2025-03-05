@@ -61,7 +61,11 @@ if (hamburger && fries) {
 }
 
 console.log((hamburger && fries));
-//В этом примере в первом выводе ничего не отобразится, а во втором получим false
+//В этом примере в первом выводе ничего не отобразится, а во втором получим false 
+//При значении null или undefined будет false
+//!!!5 сужностей в js которые всегда будут false: 
+// 0, пустая строка не с пробелом внутри (''), null, undefined, NaN 
+// Всё остальное всегда будет true!!!
 
 const hamburger = 5;
 const fries = 0;
@@ -251,3 +255,41 @@ console.log(johnReport || alexReport || samReport || mariaReport);
 console.log(!0);
 //Этот оператор работает то, что сначала превращает аргумент, к кор применён в лог-й тип данных
 //В данном случае 0-не правда станет правдой
+
+console.log(Nan || 2 || undefined);
+console.log(1 && 2 && 3);
+console.log(1 && 2 || !3);
+console.log(25 || null && !3);
+console.log(NaN || null || !3 || undefined || 5);
+console.log(NaN || null && !3 && undefined || 5);
+console.log(5 === 5 && 3 > 1 || 5);
+
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola || fries === 3 && nuggets) {
+    console.log('Done!');
+}
+
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger || cola || fries === 3 || nuggets) {
+    console.log('Done!');
+}
+
+let hamburger;
+const fries = NaN;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger && cola || fries === 3 && nuggets) {
+    console.log('Done!');
+} else {
+    console.log('Empty');
+}
